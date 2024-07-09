@@ -5,15 +5,18 @@ body, h1, h2, p, ul, li {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
 }
 
 header {
-    background-color: #333;
+    background-color: #222;
     color: #fff;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -22,38 +25,83 @@ header {
     width: 100px; 
     height: 100px; 
     border-radius: 50%;
+    border: 2px solid #555;
 }
 
 header h1 {
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 nav ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: inline-block;
+    position: relative;
 }
 
 nav ul li a {
+    display: block;
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f1c40f;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.show {
+    display: block;
 }
 
 main {
     background-color: #333;
+    padding: 20px 0;
 }
 
 footer {
-    background-color: #333;
+    background-color: #222;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+    border-top: 2px solid #444;
 }
 
 /* Additional CSS for Slideshow */

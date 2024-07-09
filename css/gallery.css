@@ -1,26 +1,37 @@
-.grid-container{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: blue;
-    padding: 10px;
-    /*column-gap: 50px;*//*gap sa tabi */
-    gap: 20px 50px;
-    /*row-gap: 10px;*//*gap sa ibaba*/
-}
-
-.grid-item{
-    background-color: antiquewhite;
-    border: 1px solid black;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
     padding: 20px;
-    font-size: 30px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.item1{
-    /*kung gusto mo na pa haba -> use ang nasa baba:*/
-    grid-column-start: 2;
-    grid-column-end: 4;
-    /*kung gusto mo naman bumaba:*/
-    grid-row-start: 2;
-    grid-row-end: 4;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1);
 }

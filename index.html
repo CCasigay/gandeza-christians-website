@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gandeza-christian-website</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="css/index.css">
     <style>
         /* Additional CSS for Slideshow */
@@ -73,10 +73,10 @@
 </head>
 <body>
     <header>
-        <img src="me.jpg" alt="Logo" class="logo">
+        <img src="images/me.jpg" alt="Logo" class="logo">
         <h1>About Me</h1>
         <nav>
-            <ul>
+            <ul class="navbar">
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="socials.html">Socials</a></li>
@@ -86,23 +86,23 @@
     <main>
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="m1.jpg" style="width:100%">
+                <img src="images/m1.jpg" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <img src="m2.jpg" style="width:100%">
+                <img src="images/m2.jpg" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <img src="m3.jpg" style="width:100%">
+                <img src="images/m3.jpg" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <img src="m4.jpg" style="width:100%">
+                <img src="images/m4.jpg" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <img src="m5.jpg" style="width:100%">
+                <img src="images/m5.jpg" style="width:100%">
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -130,6 +130,23 @@
                 slides[i].style.display = "none";  
             }
             slides[slideIndex-1].style.display = "block";  
+        }
+
+        /* Dropdown functionality */
+        function toggleDropdown() {
+            document.getElementById("navbarDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
         }
     </script>
 </body>

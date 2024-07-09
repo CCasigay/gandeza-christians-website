@@ -1,33 +1,50 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Make sure the body covers the full height of the viewport */
-    background-image: url('background.jpg'); /* Specify the path to your background image */
-    background-size: cover; /* Cover the entire background */
-    background-position: center; /* Center the background image */
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    background-image: url('images/background.jpg'); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
 }
 
 header {
-    background-color: #333;
+    background-color: #222;
     color: #fff;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-weight: bold;
+    margin: 0;
 }
 
 nav {
-    background-color: #f4f4f4;
-    padding: 10px;
+    background-color: #333;
+    padding: 15px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
-    padding: 5px 10px;
-    margin: 0 5px;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #444;
+    color: #f1c40f;
 }
 
 .container {
@@ -36,33 +53,41 @@ nav a {
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
-    flex: 1; /* Grow to fill remaining space */
+    flex: 1;
 }
 
 .button {
-    padding: 10px 20px;
+    padding: 20px 30px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    margin: 10px;
-    text-align: center; /* Center text horizontally */
+    margin: 15px;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .button img {
-    width: 50px;
+    width: 60px;
     height: auto;
-    margin-bottom: 10px; /* Add space between image and text */
+    margin-bottom: 10px;
 }
 
 footer {
-    background-color: #333;
+    background-color: #222;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    margin-top: auto; /* Push the footer to the bottom */
+    padding: 20px;
+    margin-top: auto;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
